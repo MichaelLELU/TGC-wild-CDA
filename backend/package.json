@@ -1,0 +1,32 @@
+{
+	"name": "backend",
+	"version": "1.0.0",
+	"description": "",
+	"scripts": {
+		"start": "ts-node-dev ./src/index.ts",
+		"data:create": "typeorm-ts-node-commonjs migration:create",
+		"data:generate": "typeorm-ts-node-commonjs migration:generate -d src/config/db.ts",
+		"data:up": "typeorm-ts-node-commonjs migration:run -d src/config/db.ts",
+		"data:down": "typeorm-ts-node-commonjs migration:revert -d src/config/db.ts"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"@types/cors": "^2.8.17",
+		"@types/express": "^4.17.21",
+		"ts-node-dev": "^2.0.0"
+	},
+	"dependencies": {
+		"@apollo/server": "^4.11.2",
+		"cors": "^2.8.5",
+		"dotenv": "^16.4.7",
+		"express": "^4.21.0",
+		"graphql": "^16.9.0",
+		"graphql-scalars": "^1.23.0",
+		"pg": "^8.13.1",
+		"reflect-metadata": "^0.2.2",
+		"type-graphql": "^2.0.0-rc.2",
+		"typeorm": "^0.3.20"
+	}
+}
